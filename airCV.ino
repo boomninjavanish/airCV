@@ -1,44 +1,78 @@
 /*
  * airSynthMidController.ino
  * 
- * v0.1
- * Created: 2018.11.21
+ * v0.5
+ * Created: 2019.01.10
  * Author: Matthew Dunlap
  * 
- * The Air Drum is a device that contains three IR distance sensors aiming upwards. This device is driven
- * by an Arduino micro that appears as a USB MIDI device when plugged into a computer or iPad. The device will
- * send a MIDI note and velocity when a user taps or waves their hand in the air above the sensor.
+ * The airCV is a device that contains multiple IR distance sensors aiming upwards. This device is driven
+ * by a Teensy microntroller that appears as a USB MIDI device when plugged into a computer. The device will
+ * send a MIDI information via USB or CV through 3.5mm jacks when a user taps or waves their hand in the air above the sensor.
  * 
  */
 #include <MCP4922.h>
 #include <SPI.h>
 #include <Bounce2.h>
 
-const int irDistancePin[6] = {A4, A8, A3, A7, A6, A5}; // pins for IR sensors
-const int button1Pin = 6; // buttons on side of device
+// pins for IR sensors
+const int irDistancePin[6] = {A4, A8, A3, A7, A6, A5};  
+
+// buttons on side of device
+const int button1Pin = 6; 
 const int button2Pin = 7;
+
+// led on main board
 const int ledPin = 2;
-int irDistanceVal[6];  // analog value based on voltage from IR sensor
-int noteVal[6] = {60,61,62,63,64,65};      // midi note value 0 - 127
-int velocityVal = 64;  // any value between 1-127
-const int channel = 1; // midi channel in which we are communicating
-bool soundOn = false;  // flag that allows loop to know if the note is still being played
-bool noteActuated[3] = {false, false, false}; // track if each sensor has been actuated
-bool noteSustained[3] = {false, false, false}; // track if each note is currently sustaining
-bool noteReleased[3] = {true, true, true}; // track if note has been released; if true, no note should play
-int repeatDelay = 1000;  // delay in milliseconds between each note
+
+// analog value based on voltage from IR sensor
+int irDistanceVal[6];  
+
+ // midi note values for distance sensors
+int noteVal[6] = {60,61,62,63,64,65};  
+
+// default velocity value
+int velocityVal = 64;
+
+// default MIDI channel
+const int channel = 1;
+
+// flag that allows loop to know if the note is still being played
+bool soundOn = false;  
+
+// track if each sensor has been actuated
+bool noteActuated[6] = {false, false, false, false, false, false}; 
+
+// track if each note is currently sustaining
+bool noteSustained[6] = {false, false, false, false, false, false}; 
+
+// track if note has been released; if true, no note should play
+bool noteReleased[6] = {true, true, true, true, true, true}; 
+
+// delay in milliseconds between each note
+int repeatDelay = 1000;  
+
+// analog IR distance value in which the note should be released
 int releasePoint = 260;
+
+// analog IR distance value in which the note should be started
 int actuationPoint = 300;
-int sustainPoint = 450;
-int modeSelected = 3;  // mode that determines how the velocity and pitch are sent
+
+int sustainPoint = 450; // replace with pressure??
+
+// mode that determines how the velocity and pitch are sent
+int modeSelected = 3;  
+
 int delayTime = 50;
-bool buttonNoteOn1 = false; // track if the midi note on has been sent for button press
+
+// track if the midi note on has been sent for button press
+bool buttonNoteOn1 = false; 
 bool buttonNoteOn2 = false;
 
 // setup debounce
 Bounce debouncer1 = Bounce();
 Bounce debouncer2 = Bounce();
 
+// setup DACs (three DACs with two outputs a piece)
 MCP4922 dac1(11,13,10,3);
 MCP4922 dac2(11,13,9,4);
 MCP4922 dac3(11,13,15,5);
@@ -273,13 +307,14 @@ void buttonsMidi(){
     usbMIDI.sendNoteOn(66, 127, channel);
     delay(delayTime);
     buttonNoteOn1 = true;
-    Serial.println("Button 1");
+    Serial.println("Button 1 On");
     
   }
   if ((button1 == LOW) && (buttonNoteOn1 == true)) {
     usbMIDI.sendNoteOff(66, 127, channel);
     delay(delayTime);
     buttonNoteOn1 = false;
+    Serial.println("Button 1 Off");
     
   }
   
@@ -288,13 +323,14 @@ void buttonsMidi(){
     usbMIDI.sendNoteOn(67, 127, channel);
     delay(delayTime);
     buttonNoteOn2 = true;
-    Serial.println("Button 2");
+    Serial.println("Button 2 On");
     
   }
   if ((button2 == LOW) && (buttonNoteOn2 == true)) {
     usbMIDI.sendNoteOff(67, 127, channel);
     delay(delayTime);
     buttonNoteOn2 = false;
+    Serial.println("Button 2 Off");
     
   }
 }
