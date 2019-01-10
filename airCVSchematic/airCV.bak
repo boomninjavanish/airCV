@@ -1,0 +1,954 @@
+EESchema Schematic File Version 4
+LIBS:airCV-cache
+EELAYER 26 0
+EELAYER END
+$Descr USLedger 17000 11000
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "2018-12-02"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L airCV-rescue:Teensy3.2-teensy U1
+U 1 1 5C0341D0
+P 6750 3550
+F 0 "U1" H 6750 5137 60  0000 C CNN
+F 1 "Teensy3.2" H 6750 5031 60  0000 C CNN
+F 2 "Teensy:Teensy30_31_32_LC" H 6750 2750 60  0001 C CNN
+F 3 "" H 6750 2750 60  0000 C CNN
+	1    6750 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L airCV-rescue:MCP4922-EP-Analog_DAC U2
+U 1 1 5C034271
+P 9750 2650
+F 0 "U2" H 10391 2696 50  0000 L CNN
+F 1 "MCP4922-EP" H 10391 2605 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 9750 2650 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/devicedoc/21897a.pdf" H 9750 2650 50  0001 C CNN
+	1    9750 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11800 2550 11800 2900
+Wire Wire Line
+	11800 2900 11200 2900
+Wire Wire Line
+	11200 2900 11200 2650
+Wire Wire Line
+	11800 3400 11800 3750
+Wire Wire Line
+	11800 3750 11200 3750
+Wire Wire Line
+	11200 3750 11200 3500
+Wire Wire Line
+	10350 2450 11200 2450
+Wire Wire Line
+	10350 2850 10750 2850
+Wire Wire Line
+	10750 2850 10750 3300
+Wire Wire Line
+	10750 3300 11200 3300
+$Comp
+L airCV-rescue:AudioJack2_Ground-Connector J7
+U 1 1 5C03712C
+P 12350 2550
+F 0 "J7" H 12117 2529 50  0000 R CNN
+F 1 "CV1" H 12117 2620 50  0000 R CNN
+F 2 "" H 12350 2550 50  0001 C CNN
+F 3 "~" H 12350 2550 50  0001 C CNN
+	1    12350 2550
+	-1   0    0    1   
+$EndComp
+$Comp
+L airCV-rescue:AudioJack2_Ground-Connector J8
+U 1 1 5C0371C0
+P 12350 3400
+F 0 "J8" H 12117 3379 50  0000 R CNN
+F 1 "CV2" H 12117 3470 50  0000 R CNN
+F 2 "" H 12350 3400 50  0001 C CNN
+F 3 "~" H 12350 3400 50  0001 C CNN
+	1    12350 3400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	11800 2550 12150 2550
+Wire Wire Line
+	11800 3400 12150 3400
+Wire Wire Line
+	9650 2150 9650 2000
+Wire Wire Line
+	9650 2000 9850 2000
+Wire Wire Line
+	9850 2000 9850 2150
+Connection ~ 9650 2000
+Text GLabel 9150 2550 0    50   Input ~ 0
+Teensy13
+Text GLabel 9150 2450 0    50   Input ~ 0
+Teensy11
+Text GLabel 9150 2650 0    50   Input ~ 0
+Teensy10
+Text GLabel 9150 2750 0    50   Input ~ 0
+Teensy3
+$Comp
+L airCV-rescue:MCP4922-EP-Analog_DAC U3
+U 1 1 5C038F58
+P 9750 4900
+F 0 "U3" H 10391 4946 50  0000 L CNN
+F 1 "MCP4922-EP" H 10391 4855 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 9750 4900 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/devicedoc/21897a.pdf" H 9750 4900 50  0001 C CNN
+	1    9750 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11800 4800 11800 5150
+Wire Wire Line
+	11800 5150 11200 5150
+Wire Wire Line
+	11200 5150 11200 4900
+Wire Wire Line
+	11800 5650 11800 6000
+Wire Wire Line
+	11800 6000 11200 6000
+Wire Wire Line
+	11200 6000 11200 5750
+Wire Wire Line
+	10350 4700 11200 4700
+Wire Wire Line
+	10350 5100 10750 5100
+Wire Wire Line
+	10750 5100 10750 5550
+Wire Wire Line
+	10750 5550 11200 5550
+$Comp
+L airCV-rescue:AudioJack2_Ground-Connector J9
+U 1 1 5C038F74
+P 12350 4800
+F 0 "J9" H 12117 4779 50  0000 R CNN
+F 1 "CV3" H 12117 4870 50  0000 R CNN
+F 2 "" H 12350 4800 50  0001 C CNN
+F 3 "~" H 12350 4800 50  0001 C CNN
+	1    12350 4800
+	-1   0    0    1   
+$EndComp
+$Comp
+L airCV-rescue:AudioJack2_Ground-Connector J10
+U 1 1 5C038F7A
+P 12350 5650
+F 0 "J10" H 12117 5629 50  0000 R CNN
+F 1 "CV4" H 12117 5720 50  0000 R CNN
+F 2 "" H 12350 5650 50  0001 C CNN
+F 3 "~" H 12350 5650 50  0001 C CNN
+	1    12350 5650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	11800 4800 12150 4800
+Wire Wire Line
+	11800 5650 12150 5650
+Wire Wire Line
+	9650 4400 9650 4250
+Wire Wire Line
+	9650 4250 9850 4250
+Wire Wire Line
+	9850 4250 9850 4400
+Text GLabel 9150 4800 0    50   Input ~ 0
+Teensy13
+Text GLabel 9150 4700 0    50   Input ~ 0
+Teensy11
+Text GLabel 9150 4900 0    50   Input ~ 0
+Teensy9
+Text GLabel 9150 5000 0    50   Input ~ 0
+Teensy4
+$Comp
+L airCV-rescue:MCP4922-EP-Analog_DAC U4
+U 1 1 5C0396DB
+P 9750 7200
+F 0 "U4" H 10391 7246 50  0000 L CNN
+F 1 "MCP4922-EP" H 10391 7155 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 9750 7200 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/devicedoc/21897a.pdf" H 9750 7200 50  0001 C CNN
+	1    9750 7200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11800 7100 11800 7450
+Wire Wire Line
+	11800 7450 11200 7450
+Wire Wire Line
+	11200 7450 11200 7200
+Wire Wire Line
+	11800 7950 11800 8300
+Wire Wire Line
+	11800 8300 11200 8300
+Wire Wire Line
+	11200 8300 11200 8050
+Wire Wire Line
+	10350 7000 11200 7000
+Wire Wire Line
+	10350 7400 10750 7400
+Wire Wire Line
+	10750 7400 10750 7850
+Wire Wire Line
+	10750 7850 11200 7850
+$Comp
+L airCV-rescue:AudioJack2_Ground-Connector J11
+U 1 1 5C0396F7
+P 12350 7100
+F 0 "J11" H 12117 7079 50  0000 R CNN
+F 1 "CV5" H 12117 7170 50  0000 R CNN
+F 2 "" H 12350 7100 50  0001 C CNN
+F 3 "~" H 12350 7100 50  0001 C CNN
+	1    12350 7100
+	-1   0    0    1   
+$EndComp
+$Comp
+L airCV-rescue:AudioJack2_Ground-Connector J12
+U 1 1 5C0396FD
+P 12350 7950
+F 0 "J12" H 12117 7929 50  0000 R CNN
+F 1 "CV6" H 12117 8020 50  0000 R CNN
+F 2 "" H 12350 7950 50  0001 C CNN
+F 3 "~" H 12350 7950 50  0001 C CNN
+	1    12350 7950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	11800 7950 12150 7950
+Wire Wire Line
+	9650 6700 9650 6550
+Wire Wire Line
+	9650 6550 9850 6550
+Wire Wire Line
+	9850 6550 9850 6700
+Text GLabel 9150 7100 0    50   Input ~ 0
+Teensy13
+Text GLabel 9150 7000 0    50   Input ~ 0
+Teensy11
+Text GLabel 9150 7200 0    50   Input ~ 0
+Teensy15
+Text GLabel 9150 7300 0    50   Input ~ 0
+Teensy5
+Wire Wire Line
+	9850 3150 9850 4250
+Connection ~ 9850 4250
+Wire Wire Line
+	9850 5400 9850 6550
+Connection ~ 9850 6550
+Wire Wire Line
+	9650 4250 8350 4250
+Wire Wire Line
+	8350 4250 8350 2850
+Wire Wire Line
+	8350 2000 9650 2000
+Connection ~ 9650 4250
+Wire Wire Line
+	8350 4250 8350 5100
+Wire Wire Line
+	8350 6550 9650 6550
+Connection ~ 8350 4250
+Connection ~ 9650 6550
+Wire Wire Line
+	8350 6550 8350 7400
+Wire Wire Line
+	8350 8200 9850 8200
+Wire Wire Line
+	9850 7700 9850 8200
+Connection ~ 8350 6550
+$Comp
+L airCV-rescue:GNDA-power #PWR017
+U 1 1 5C04B5FF
+P 12150 2650
+F 0 "#PWR017" H 12150 2400 50  0001 C CNN
+F 1 "GNDA" H 12155 2477 50  0000 C CNN
+F 2 "" H 12150 2650 50  0001 C CNN
+F 3 "" H 12150 2650 50  0001 C CNN
+	1    12150 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L airCV-rescue:GNDA-power #PWR018
+U 1 1 5C04B648
+P 12150 3500
+F 0 "#PWR018" H 12150 3250 50  0001 C CNN
+F 1 "GNDA" H 12155 3327 50  0000 C CNN
+F 2 "" H 12150 3500 50  0001 C CNN
+F 3 "" H 12150 3500 50  0001 C CNN
+	1    12150 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L airCV-rescue:GNDA-power #PWR019
+U 1 1 5C04B691
+P 12150 4900
+F 0 "#PWR019" H 12150 4650 50  0001 C CNN
+F 1 "GNDA" H 12155 4727 50  0000 C CNN
+F 2 "" H 12150 4900 50  0001 C CNN
+F 3 "" H 12150 4900 50  0001 C CNN
+	1    12150 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L airCV-rescue:GNDA-power #PWR020
+U 1 1 5C04B6DA
+P 12150 5750
+F 0 "#PWR020" H 12150 5500 50  0001 C CNN
+F 1 "GNDA" H 12155 5577 50  0000 C CNN
+F 2 "" H 12150 5750 50  0001 C CNN
+F 3 "" H 12150 5750 50  0001 C CNN
+	1    12150 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L airCV-rescue:GNDA-power #PWR021
+U 1 1 5C04B723
+P 12150 7200
+F 0 "#PWR021" H 12150 6950 50  0001 C CNN
+F 1 "GNDA" H 12155 7027 50  0000 C CNN
+F 2 "" H 12150 7200 50  0001 C CNN
+F 3 "" H 12150 7200 50  0001 C CNN
+	1    12150 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L airCV-rescue:GNDA-power #PWR022
+U 1 1 5C04B76C
+P 12150 8050
+F 0 "#PWR022" H 12150 7800 50  0001 C CNN
+F 1 "GNDA" H 12155 7877 50  0000 C CNN
+F 2 "" H 12150 8050 50  0001 C CNN
+F 3 "" H 12150 8050 50  0001 C CNN
+	1    12150 8050
+	1    0    0    -1  
+$EndComp
+$Comp
+L airCV-rescue:GNDA-power #PWR014
+U 1 1 5C04B7AE
+P 9650 3150
+F 0 "#PWR014" H 9650 2900 50  0001 C CNN
+F 1 "GNDA" H 9655 2977 50  0000 C CNN
+F 2 "" H 9650 3150 50  0001 C CNN
+F 3 "" H 9650 3150 50  0001 C CNN
+	1    9650 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L airCV-rescue:GNDA-power #PWR015
+U 1 1 5C04B7F0
+P 9650 5400
+F 0 "#PWR015" H 9650 5150 50  0001 C CNN
+F 1 "GNDA" H 9655 5227 50  0000 C CNN
+F 2 "" H 9650 5400 50  0001 C CNN
+F 3 "" H 9650 5400 50  0001 C CNN
+	1    9650 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L airCV-rescue:GNDA-power #PWR016
+U 1 1 5C04B832
+P 9650 7700
+F 0 "#PWR016" H 9650 7450 50  0001 C CNN
+F 1 "GNDA" H 9655 7527 50  0000 C CNN
+F 2 "" H 9650 7700 50  0001 C CNN
+F 3 "" H 9650 7700 50  0001 C CNN
+	1    9650 7700
+	1    0    0    -1  
+$EndComp
+$Comp
+L airCV-rescue:Conn_01x03_Male-Connector J1
+U 1 1 5C04D790
+P 3500 2200
+F 0 "J1" H 3606 2478 50  0000 C CNN
+F 1 "IR Distance 1" H 3606 2387 50  0000 C CNN
+F 2 "" H 3500 2200 50  0001 C CNN
+F 3 "~" H 3500 2200 50  0001 C CNN
+	1    3500 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L airCV-rescue:Conn_01x03_Male-Connector J2
+U 1 1 5C04D858
+P 3500 2750
+F 0 "J2" H 3606 3028 50  0000 C CNN
+F 1 "IR Distance 2" H 3606 2937 50  0000 C CNN
+F 2 "" H 3500 2750 50  0001 C CNN
+F 3 "~" H 3500 2750 50  0001 C CNN
+	1    3500 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L airCV-rescue:Conn_01x03_Male-Connector J3
+U 1 1 5C04E726
+P 3500 3300
+F 0 "J3" H 3606 3578 50  0000 C CNN
+F 1 "IR Distance 3" H 3606 3487 50  0000 C CNN
+F 2 "" H 3500 3300 50  0001 C CNN
+F 3 "~" H 3500 3300 50  0001 C CNN
+	1    3500 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L airCV-rescue:Conn_01x03_Male-Connector J4
+U 1 1 5C04E72C
+P 3500 3850
+F 0 "J4" H 3606 4128 50  0000 C CNN
+F 1 "IR Distance 4" H 3606 4037 50  0000 C CNN
+F 2 "" H 3500 3850 50  0001 C CNN
+F 3 "~" H 3500 3850 50  0001 C CNN
+	1    3500 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L airCV-rescue:Conn_01x03_Male-Connector J5
+U 1 1 5C04F621
+P 3500 4400
+F 0 "J5" H 3606 4678 50  0000 C CNN
+F 1 "IR Distance 5" H 3606 4587 50  0000 C CNN
+F 2 "" H 3500 4400 50  0001 C CNN
+F 3 "~" H 3500 4400 50  0001 C CNN
+	1    3500 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L airCV-rescue:Conn_01x03_Male-Connector J6
+U 1 1 5C04F627
+P 3500 4950
+F 0 "J6" H 3606 5228 50  0000 C CNN
+F 1 "IR Distance 6" H 3606 5137 50  0000 C CNN
+F 2 "" H 3500 4950 50  0001 C CNN
+F 3 "~" H 3500 4950 50  0001 C CNN
+	1    3500 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L airCV-rescue:+5V-power #PWR01
+U 1 1 5C05243C
+P 3900 2100
+F 0 "#PWR01" H 3900 1950 50  0001 C CNN
+F 1 "+5V" V 3915 2228 50  0000 L CNN
+F 2 "" H 3900 2100 50  0001 C CNN
+F 3 "" H 3900 2100 50  0001 C CNN
+	1    3900 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L airCV-rescue:+5V-power #PWR02
+U 1 1 5C0524A7
+P 3900 2650
+F 0 "#PWR02" H 3900 2500 50  0001 C CNN
+F 1 "+5V" V 3915 2778 50  0000 L CNN
+F 2 "" H 3900 2650 50  0001 C CNN
+F 3 "" H 3900 2650 50  0001 C CNN
+	1    3900 2650
+	0    1    1    0   
+$EndComp
+$Comp
+L airCV-rescue:+5V-power #PWR03
+U 1 1 5C05250B
+P 3900 3200
+F 0 "#PWR03" H 3900 3050 50  0001 C CNN
+F 1 "+5V" V 3915 3328 50  0000 L CNN
+F 2 "" H 3900 3200 50  0001 C CNN
+F 3 "" H 3900 3200 50  0001 C CNN
+	1    3900 3200
+	0    1    1    0   
+$EndComp
+$Comp
+L airCV-rescue:+5V-power #PWR04
+U 1 1 5C053406
+P 3900 3750
+F 0 "#PWR04" H 3900 3600 50  0001 C CNN
+F 1 "+5V" V 3915 3878 50  0000 L CNN
+F 2 "" H 3900 3750 50  0001 C CNN
+F 3 "" H 3900 3750 50  0001 C CNN
+	1    3900 3750
+	0    1    1    0   
+$EndComp
+$Comp
+L airCV-rescue:+5V-power #PWR05
+U 1 1 5C05340C
+P 3900 4300
+F 0 "#PWR05" H 3900 4150 50  0001 C CNN
+F 1 "+5V" V 3915 4428 50  0000 L CNN
+F 2 "" H 3900 4300 50  0001 C CNN
+F 3 "" H 3900 4300 50  0001 C CNN
+	1    3900 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L airCV-rescue:+5V-power #PWR06
+U 1 1 5C053412
+P 3900 4850
+F 0 "#PWR06" H 3900 4700 50  0001 C CNN
+F 1 "+5V" V 3915 4978 50  0000 L CNN
+F 2 "" H 3900 4850 50  0001 C CNN
+F 3 "" H 3900 4850 50  0001 C CNN
+	1    3900 4850
+	0    1    1    0   
+$EndComp
+$Comp
+L airCV-rescue:GNDD-power #PWR07
+U 1 1 5C054367
+P 4150 2750
+F 0 "#PWR07" H 4150 2500 50  0001 C CNN
+F 1 "GNDD" V 4154 2640 50  0000 R CNN
+F 2 "" H 4150 2750 50  0001 C CNN
+F 3 "" H 4150 2750 50  0001 C CNN
+	1    4150 2750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L airCV-rescue:GNDD-power #PWR08
+U 1 1 5C0552E7
+P 4150 3300
+F 0 "#PWR08" H 4150 3050 50  0001 C CNN
+F 1 "GNDD" V 4154 3190 50  0000 R CNN
+F 2 "" H 4150 3300 50  0001 C CNN
+F 3 "" H 4150 3300 50  0001 C CNN
+	1    4150 3300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L airCV-rescue:GNDD-power #PWR09
+U 1 1 5C0552ED
+P 4150 3850
+F 0 "#PWR09" H 4150 3600 50  0001 C CNN
+F 1 "GNDD" V 4154 3740 50  0000 R CNN
+F 2 "" H 4150 3850 50  0001 C CNN
+F 3 "" H 4150 3850 50  0001 C CNN
+	1    4150 3850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L airCV-rescue:GNDD-power #PWR010
+U 1 1 5C056195
+P 4150 4400
+F 0 "#PWR010" H 4150 4150 50  0001 C CNN
+F 1 "GNDD" V 4154 4290 50  0000 R CNN
+F 2 "" H 4150 4400 50  0001 C CNN
+F 3 "" H 4150 4400 50  0001 C CNN
+	1    4150 4400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L airCV-rescue:GNDD-power #PWR011
+U 1 1 5C05619B
+P 4150 4950
+F 0 "#PWR011" H 4150 4700 50  0001 C CNN
+F 1 "GNDD" V 4154 4840 50  0000 R CNN
+F 2 "" H 4150 4950 50  0001 C CNN
+F 3 "" H 4150 4950 50  0001 C CNN
+	1    4150 4950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3700 2100 3900 2100
+Wire Wire Line
+	3700 2650 3900 2650
+Wire Wire Line
+	3700 2750 4150 2750
+Wire Wire Line
+	3700 3200 3900 3200
+Wire Wire Line
+	3700 3300 4150 3300
+Wire Wire Line
+	3700 3750 3900 3750
+Wire Wire Line
+	3700 3850 4150 3850
+Wire Wire Line
+	3700 4300 3900 4300
+Wire Wire Line
+	3700 4400 4150 4400
+Wire Wire Line
+	3700 4850 3900 4850
+Wire Wire Line
+	3700 4950 4150 4950
+Wire Wire Line
+	3700 2300 4950 2300
+Wire Wire Line
+	4950 2300 4950 4450
+Wire Wire Line
+	3700 2850 4850 2850
+Wire Wire Line
+	4850 2850 4850 4550
+Wire Wire Line
+	3700 3400 4750 3400
+Wire Wire Line
+	4750 3400 4750 4650
+Wire Wire Line
+	3700 3950 4650 3950
+Wire Wire Line
+	4650 3950 4650 4750
+Wire Wire Line
+	3700 4500 4550 4500
+Wire Wire Line
+	4550 4500 4550 4850
+Wire Wire Line
+	7750 5050 7750 4850
+Wire Wire Line
+	4950 4450 5750 4450
+Wire Wire Line
+	4850 4550 5750 4550
+Wire Wire Line
+	4750 4650 5750 4650
+Wire Wire Line
+	4650 4750 5750 4750
+Wire Wire Line
+	4550 4850 5750 4850
+Wire Wire Line
+	3700 5050 7750 5050
+Wire Wire Line
+	7750 4250 8350 4250
+$Comp
+L airCV-rescue:GNDA-power #PWR013
+U 1 1 5C0ADA02
+P 8050 4450
+F 0 "#PWR013" H 8050 4200 50  0001 C CNN
+F 1 "GNDA" V 8055 4322 50  0000 R CNN
+F 2 "" H 8050 4450 50  0001 C CNN
+F 3 "" H 8050 4450 50  0001 C CNN
+	1    8050 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 4450 8050 4450
+Text GLabel 5750 3450 0    50   Input ~ 0
+Teensy11
+Text GLabel 5750 3350 0    50   Input ~ 0
+Teensy10
+Text GLabel 5750 4150 0    50   Input ~ 0
+Teensy13
+Text GLabel 5750 2650 0    50   Input ~ 0
+Teensy3
+Text GLabel 5750 3250 0    50   Input ~ 0
+Teensy9
+Text GLabel 5750 2750 0    50   Input ~ 0
+Teensy4
+Text GLabel 5750 4350 0    50   Input ~ 0
+Teensy15
+Text GLabel 5750 2850 0    50   Input ~ 0
+Teensy5
+NoConn ~ 5750 2350
+NoConn ~ 5750 2450
+NoConn ~ 5750 3150
+NoConn ~ 5750 3550
+NoConn ~ 5750 3650
+NoConn ~ 5750 3750
+NoConn ~ 5750 3850
+NoConn ~ 5750 3950
+NoConn ~ 5750 4050
+NoConn ~ 5750 4250
+NoConn ~ 7750 2350
+NoConn ~ 7750 2450
+NoConn ~ 7750 2750
+NoConn ~ 7750 2850
+NoConn ~ 7750 2950
+NoConn ~ 7750 3050
+NoConn ~ 7750 3150
+NoConn ~ 7750 3250
+NoConn ~ 7750 3350
+NoConn ~ 7750 3450
+NoConn ~ 7750 3550
+NoConn ~ 7750 3650
+NoConn ~ 7750 3750
+NoConn ~ 7750 3850
+NoConn ~ 7750 3950
+NoConn ~ 7750 4050
+NoConn ~ 7750 4150
+NoConn ~ 7750 4350
+NoConn ~ 7750 4550
+NoConn ~ 7750 4650
+NoConn ~ 7750 4750
+$Comp
+L airCV-rescue:LED-Device D1
+U 1 1 5C129D1A
+P 5000 2050
+F 0 "D1" H 4991 2266 50  0000 C CNN
+F 1 "LED" H 4991 2175 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 5000 2050 50  0001 C CNN
+F 3 "~" H 5000 2050 50  0001 C CNN
+	1    5000 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L airCV-rescue:R-Device R1
+U 1 1 5C13489B
+P 5350 2050
+F 0 "R1" V 5250 2050 50  0000 C CNN
+F 1 "220" V 5350 2050 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 5280 2050 50  0001 C CNN
+F 3 "~" H 5350 2050 50  0001 C CNN
+	1    5350 2050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5150 2050 5200 2050
+Wire Wire Line
+	5750 2250 5750 1600
+Wire Wire Line
+	4850 1600 4850 2050
+Wire Wire Line
+	4850 2050 4550 2050
+Wire Wire Line
+	4550 2050 4550 2200
+Wire Wire Line
+	4550 2200 3700 2200
+Wire Wire Line
+	5500 2050 5500 2550
+Wire Wire Line
+	5500 2550 5750 2550
+Wire Wire Line
+	4550 2050 4550 1850
+$Comp
+L airCV-rescue:GNDD-power #PWR012
+U 1 1 5C0542D7
+P 4550 1850
+F 0 "#PWR012" H 4550 1600 50  0001 C CNN
+F 1 "GNDD" V 4554 1740 50  0000 R CNN
+F 2 "" H 4550 1850 50  0001 C CNN
+F 3 "" H 4550 1850 50  0001 C CNN
+	1    4550 1850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5750 1600 4850 1600
+Connection ~ 4850 2050
+Connection ~ 4550 2050
+$Comp
+L airCV-rescue:Opamp_Dual_Generic-Device U5
+U 2 1 5C19FEF0
+P 11500 2550
+F 0 "U5" H 11500 2917 50  0000 C CNN
+F 1 "TLV2462" H 11500 2826 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm_Socket" H 11500 2550 50  0001 C CNN
+F 3 "~" H 11500 2550 50  0001 C CNN
+	2    11500 2550
+	1    0    0    -1  
+$EndComp
+Connection ~ 11800 2550
+$Comp
+L airCV-rescue:Opamp_Dual_Generic-Device U5
+U 3 1 5C19FF59
+P 11500 4200
+F 0 "U5" V 11175 4200 50  0000 C CNN
+F 1 "TLV2462" V 11266 4200 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm_Socket" H 11500 4200 50  0001 C CNN
+F 3 "~" H 11500 4200 50  0001 C CNN
+	3    11500 4200
+	0    1    1    0   
+$EndComp
+$Comp
+L airCV-rescue:Opamp_Dual_Generic-Device U5
+U 1 1 5C19FFB8
+P 11500 3400
+F 0 "U5" H 11500 3800 50  0000 C CNN
+F 1 "TLV2462" H 11500 3700 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm_Socket" H 11500 3400 50  0001 C CNN
+F 3 "~" H 11500 3400 50  0001 C CNN
+	1    11500 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L airCV-rescue:Opamp_Dual_Generic-Device U6
+U 1 1 5C1A003B
+P 11500 4800
+F 0 "U6" H 11500 5167 50  0000 C CNN
+F 1 "TLV2462" H 11500 5076 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm_Socket" H 11500 4800 50  0001 C CNN
+F 3 "~" H 11500 4800 50  0001 C CNN
+	1    11500 4800
+	1    0    0    -1  
+$EndComp
+Connection ~ 11800 4800
+$Comp
+L airCV-rescue:Opamp_Dual_Generic-Device U6
+U 2 1 5C1A00A2
+P 11500 5650
+F 0 "U6" H 11500 6017 50  0000 C CNN
+F 1 "TLV2462" H 11500 5926 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm_Socket" H 11500 5650 50  0001 C CNN
+F 3 "~" H 11500 5650 50  0001 C CNN
+	2    11500 5650
+	1    0    0    -1  
+$EndComp
+Connection ~ 11800 5650
+$Comp
+L airCV-rescue:Opamp_Dual_Generic-Device U6
+U 3 1 5C1A010D
+P 11500 6550
+F 0 "U6" V 11175 6550 50  0000 C CNN
+F 1 "TLV2462" V 11266 6550 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm_Socket" H 11500 6550 50  0001 C CNN
+F 3 "~" H 11500 6550 50  0001 C CNN
+	3    11500 6550
+	0    1    1    0   
+$EndComp
+$Comp
+L airCV-rescue:Opamp_Dual_Generic-Device U7
+U 1 1 5C1A0197
+P 11500 7100
+F 0 "U7" H 11500 7467 50  0000 C CNN
+F 1 "TLV2462" H 11500 7376 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm_Socket" H 11500 7100 50  0001 C CNN
+F 3 "~" H 11500 7100 50  0001 C CNN
+	1    11500 7100
+	1    0    0    -1  
+$EndComp
+Connection ~ 11800 7100
+Wire Wire Line
+	11800 7100 12150 7100
+$Comp
+L airCV-rescue:Opamp_Dual_Generic-Device U7
+U 2 1 5C1A3426
+P 11500 7950
+F 0 "U7" H 11500 8317 50  0000 C CNN
+F 1 "TLV2462" H 11500 8226 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm_Socket" H 11500 7950 50  0001 C CNN
+F 3 "~" H 11500 7950 50  0001 C CNN
+	2    11500 7950
+	1    0    0    -1  
+$EndComp
+Connection ~ 11800 7950
+$Comp
+L airCV-rescue:Opamp_Dual_Generic-Device U7
+U 3 1 5C1A349D
+P 11500 8850
+F 0 "U7" V 11175 8850 50  0000 C CNN
+F 1 "TLV2462" V 11266 8850 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm_Socket" H 11500 8850 50  0001 C CNN
+F 3 "~" H 11500 8850 50  0001 C CNN
+	3    11500 8850
+	0    1    1    0   
+$EndComp
+Connection ~ 11800 3400
+$Comp
+L airCV-rescue:+5V-power #PWR0101
+U 1 1 5C1BB8DB
+P 11800 6450
+F 0 "#PWR0101" H 11800 6300 50  0001 C CNN
+F 1 "+5V" V 11815 6578 50  0000 L CNN
+F 2 "" H 11800 6450 50  0001 C CNN
+F 3 "" H 11800 6450 50  0001 C CNN
+	1    11800 6450
+	0    1    1    0   
+$EndComp
+$Comp
+L airCV-rescue:+5V-power #PWR0102
+U 1 1 5C1BB94E
+P 11800 8750
+F 0 "#PWR0102" H 11800 8600 50  0001 C CNN
+F 1 "+5V" V 11815 8878 50  0000 L CNN
+F 2 "" H 11800 8750 50  0001 C CNN
+F 3 "" H 11800 8750 50  0001 C CNN
+	1    11800 8750
+	0    1    1    0   
+$EndComp
+$Comp
+L airCV-rescue:+5V-power #PWR0103
+U 1 1 5C1BB9C1
+P 11800 4100
+F 0 "#PWR0103" H 11800 3950 50  0001 C CNN
+F 1 "+5V" V 11815 4228 50  0000 L CNN
+F 2 "" H 11800 4100 50  0001 C CNN
+F 3 "" H 11800 4100 50  0001 C CNN
+	1    11800 4100
+	0    1    1    0   
+$EndComp
+$Comp
+L airCV-rescue:GNDA-power #PWR0104
+U 1 1 5C1BBA3B
+P 11200 4100
+F 0 "#PWR0104" H 11200 3850 50  0001 C CNN
+F 1 "GNDA" V 11205 3973 50  0000 R CNN
+F 2 "" H 11200 4100 50  0001 C CNN
+F 3 "" H 11200 4100 50  0001 C CNN
+	1    11200 4100
+	0    1    1    0   
+$EndComp
+$Comp
+L airCV-rescue:GNDA-power #PWR0105
+U 1 1 5C1BBAAE
+P 11200 6450
+F 0 "#PWR0105" H 11200 6200 50  0001 C CNN
+F 1 "GNDA" V 11205 6323 50  0000 R CNN
+F 2 "" H 11200 6450 50  0001 C CNN
+F 3 "" H 11200 6450 50  0001 C CNN
+	1    11200 6450
+	0    1    1    0   
+$EndComp
+$Comp
+L airCV-rescue:GNDA-power #PWR0106
+U 1 1 5C1BBB21
+P 11200 8750
+F 0 "#PWR0106" H 11200 8500 50  0001 C CNN
+F 1 "GNDA" V 11205 8623 50  0000 R CNN
+F 2 "" H 11200 8750 50  0001 C CNN
+F 3 "" H 11200 8750 50  0001 C CNN
+	1    11200 8750
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push SW?
+U 1 1 5C1D9243
+P 7750 1650
+F 0 "SW?" H 7750 1935 50  0000 C CNN
+F 1 "Button1" H 7750 1844 50  0000 C CNN
+F 2 "" H 7750 1850 50  0001 C CNN
+F 3 "" H 7750 1850 50  0001 C CNN
+	1    7750 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW?
+U 1 1 5C1D935D
+P 8350 1650
+F 0 "SW?" H 8350 1935 50  0000 C CNN
+F 1 "Button2" H 8350 1844 50  0000 C CNN
+F 2 "" H 8350 1850 50  0001 C CNN
+F 3 "" H 8350 1850 50  0001 C CNN
+	1    8350 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 5100 8350 5100
+Connection ~ 8350 5100
+Wire Wire Line
+	8350 5100 8350 6550
+Wire Wire Line
+	9150 7400 8350 7400
+Connection ~ 8350 7400
+Wire Wire Line
+	8350 7400 8350 8200
+Wire Wire Line
+	9150 2850 8350 2850
+Connection ~ 8350 2850
+Wire Wire Line
+	8350 2850 8350 2000
+Wire Wire Line
+	7950 1650 8050 1650
+Wire Wire Line
+	7750 2650 8050 2650
+Wire Wire Line
+	8050 2650 8050 1650
+Connection ~ 8050 1650
+Wire Wire Line
+	8050 1650 8150 1650
+NoConn ~ 7750 2550
+Text GLabel 8550 1650 2    50   Input ~ 0
+Teensy7
+Text GLabel 7550 1650 0    50   Input ~ 0
+Teensy6
+Text GLabel 5750 2950 0    50   Input ~ 0
+Teensy6
+Text GLabel 5750 3050 0    50   Input ~ 0
+Teensy7
+NoConn ~ 7750 2250
+$EndSCHEMATC
